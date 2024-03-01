@@ -9,9 +9,12 @@ class HumanPlayer(game.Player):
     def __init__(self):
         super().__init__()
 
-    def choose_move(self, state):
+    def choose_move(self, state):        
         # generate the list of moves:
         moves = state.generateMoves()
+
+        if not moves:
+            return None
 
         for i, action in enumerate(moves):
             print('{}: {}'.format(i, action))
