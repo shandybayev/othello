@@ -90,7 +90,7 @@ class State:
     #  Returns the list of possible moves for player 'player'
     def generateMoves(self, player = None):
 
-        if player == None:
+        if player is None:
             player = self.nextPlayerToMove
         moves = []
 
@@ -125,7 +125,7 @@ class State:
     def applyMove(self, move):
 
         if move == None:
-            print("\nPlayer " + PLAYER_NAMES[self.nextPlayerToMove] + " passes the move!")
+            print("Player " + PLAYER_NAMES[self.nextPlayerToMove] + " passes the move!")
             self.nextPlayerToMove = OTHER_PLAYER[self.nextPlayerToMove]
             return #player passes
 

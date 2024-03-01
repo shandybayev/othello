@@ -1,6 +1,7 @@
 import agent
 import othello
 import game
+import zzs24
 import sys
 
 def create_player(arg,  depht_or_time):
@@ -13,7 +14,7 @@ def create_player(arg,  depht_or_time):
     elif arg == 'alphabeta':
         return agent.AlphaBeta(depht_or_time)
     elif arg == 'extra':
-        return agent.extra(depht_or_time)
+        return zzs24.zzs24(depht_or_time)
     else:
         agent.RandomAgent()
 
